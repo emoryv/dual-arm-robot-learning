@@ -2,13 +2,13 @@
 
 **Praxis Lab · Cornell University · Research Intern · June 2026–present**
 
-Developed a data-collection pipeline for imitation learning with a dual-arm xArm6 system. The work connected simulation, robot teleoperation, multi-camera observations, and dataset recording. I was invited to continue beyond the summer research program.
+I developed a pipeline for collecting demonstrations with a dual-arm xArm6 robot system. The pipeline brings together simulation, teleoperation, camera streams, and recording for imitation learning. I was invited to continue beyond the summer research program.
 
 ## My contributions
 
 - Integrated MuJoCo simulation, ROS teleoperation, multi-camera streams, and Zarr recording.
-- Adapted and debugged the recording infrastructure across simulation and the physical-robot setup.
-- Worked with arm states, gripper observations, wrist-camera streams, and external-camera streams.
+- Adapted and debugged the recording software in simulation and on the physical robots.
+- Worked on recording arm and gripper states alongside wrist-camera and external-camera streams.
 
 ## Pipeline overview
 
@@ -22,9 +22,9 @@ flowchart TD
     C --> E["Zarr recordings"]
 ```
 
-The engineering focus was the connection between these components: making robot-state, gripper, and camera recording operate together so demonstrations could support imitation-learning research.
+My focus was getting the robot-state, gripper, and camera recording components to work together across simulation and hardware.
 
-## Technical scope
+## Main components
 
 | Component | Purpose |
 | --- | --- |
@@ -34,7 +34,7 @@ The engineering focus was the connection between these components: making robot-
 | Wrist and external cameras | Demonstration views |
 | Zarr | Demonstration recording |
 
-**Source availability:** This personal case study summarizes collaborative Praxis Lab work. Lab source code and datasets are not distributed here; the work described covers data collection, rather than evaluation of a learned policy.
+**About this repository:** This write-up describes my data-collection work at Praxis Lab. It does not include the lab's source code, datasets, or results from training a robot policy.
 
 **Technologies:** Python, MuJoCo, ROS, xArm6, Zarr
 
